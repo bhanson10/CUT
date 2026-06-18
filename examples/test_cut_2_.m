@@ -7,7 +7,7 @@ load("colors.mat");
 
 %% CUT4 demo
 disp("CUT4 results:")
-[Z, W] = CUT4(mu, S);
+[Z, W] = cut4(mu, S);
 
 f1 = figure(1); clf; f1.Position = [250, 250, 1300, 600]; 
 tiledlayout(1, 2, "Padding", "compact"); 
@@ -24,16 +24,16 @@ plot_gaussian_ellipsoid(mu, S, "p", p);
 xlim([-3.5, 3.5]); ylim([-3.5, 3.5]); axis equal; 
 
 % numerical/analytical calculations
-M1_n = reconstruct_CUT(Z, W, 1, 4), % 1) first central moment 
-M2_n = reconstruct_CUT(Z, W, 2, 4), % 2) second central moment 
-M3_n = reconstruct_CUT(Z, W, 3, 4), % 3) third central moment 
+M1_n = reconstruct_cut(Z, W, 1, 4), % 1) first central moment 
+M2_n = reconstruct_cut(Z, W, 2, 4), % 2) second central moment 
+M3_n = reconstruct_cut(Z, W, 3, 4), % 3) third central moment 
 M3_a = isserlis_theorem(3, S), % 3) third central moment 
-M4_n = reconstruct_CUT(Z, W, 4, 4), % 4) fourth central moment
+M4_n = reconstruct_cut(Z, W, 4, 4), % 4) fourth central moment
 M4_a = isserlis_theorem(4, S), % 4) fourth central moment 
 
 %% CUT6 demo
 disp("CUT6 results:")
-[Z, W] = CUT6(mu, S); 
+[Z, W] = cut6(mu, S); 
 
 nexttile(2); hold on; box on; 
 set(gca, 'FontName', 'Times','FontSize', 24, "LineWidth", 2); 
@@ -44,9 +44,9 @@ plot_gaussian_ellipsoid(mu, S, "p", p);
 xlim([-3.5, 3.5]); ylim([-3.5, 3.5]); axis equal; 
 
 % numerical/analytical calculations
-M1_n = reconstruct_CUT(Z, W, 1, 6), % 1) first central moment 
-M2_n = reconstruct_CUT(Z, W, 2, 6), % 2) second central moment 
-M3_n = reconstruct_CUT(Z, W, 3, 6), % 3) third central moment 
+M1_n = reconstruct_cut(Z, W, 1, 6), % 1) first central moment 
+M2_n = reconstruct_cut(Z, W, 2, 6), % 2) second central moment 
+M3_n = reconstruct_cut(Z, W, 3, 6), % 3) third central moment 
 M3_a = isserlis_theorem(3, S), % 3) third central moment 
-M4_n = reconstruct_CUT(Z, W, 4, 6), % 4) fourth central moment 
+M4_n = reconstruct_cut(Z, W, 4, 6), % 4) fourth central moment 
 M4_a = isserlis_theorem(4, S), % 4) fourth central moment 

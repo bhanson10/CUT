@@ -1,4 +1,4 @@
-function [Z, W] = CUT4(mu, S)
+function [Z, W] = cut4(mu, S)
 % Description: 
 %   The 5th order conjugate unscented transform sigma points and weights
 %   for dimenions 1 <= N <= 2, with mean mu and covariance S

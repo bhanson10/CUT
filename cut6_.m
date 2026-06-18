@@ -1,4 +1,4 @@
-function [Z, W] = CUT6(mu, S)
+function [Z, W] = cut6(mu, S)
 % Description: 
 %   The 6th order conjugate unscented transform sigma points and weights
 %   for dimenions 2 <= N <= 9, with mean mu and covariance S

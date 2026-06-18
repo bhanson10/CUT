@@ -4,9 +4,9 @@ clear all; close all; clc; format long;
 tol = 1e-10;
 mu = [0; 0]; S = [1 0; 0 1];
 
-%% CUT4 demo
-fprintf("2D CUT4 results:\n\n")
-[Z, W] = CUT4(mu, S); 
+%% cut4 demo
+fprintf("2D cut4 results:\n\n")
+[Z, W] = cut4(mu, S); 
 
 % E[x_i^2] = 1
 count = 1; 
@@ -106,9 +106,9 @@ else
     fprintf("ERROR: E[x_i^2*x_j^2]\n\n");
 end
 
-%% CUT6 demo
-fprintf("\n2D CUT6 results:\n\n")
-[Z, W] = CUT6(mu, S); 
+%% cut6 demo
+fprintf("\n2D cut6 results:\n\n")
+[Z, W] = cut6(mu, S); 
 
 % E[x_i^2] = 1
 clear sums; count = 1;
@@ -210,9 +210,9 @@ end
 %% 4D parameters
 mu = [0; 0; 0; 0]; S = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1];
 
-%% CUT6 demo
-fprintf("\n4D CUT6 results:\n\n")
-[Z, W] = CUT6(mu, S); 
+%% cut6 demo
+fprintf("\n4D cut6 results:\n\n")
+[Z, W] = cut6(mu, S); 
 
 % E[x_i^2] = 1
 clear sums; count = 1;

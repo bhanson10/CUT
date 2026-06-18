@@ -13,7 +13,7 @@ Nmc = 5000;
 X0 = mvnrnd(mu_s, S_s, Nmc); 
 
 % CUT
-[Z0, W] = CUT6(mu_s, S_s); n = size(Z0, 1); 
+[Z0, W] = cut6(mu_s, S_s); n = size(Z0, 1); 
 
 % plotting
 figure("Position", [348,206,784,604]); 
@@ -23,10 +23,10 @@ scatter(X0(:, 1), X0(:, 2), 50, 'filled', 'MarkerFaceColor', [0.7 0.7 0.7], 'Mar
 scatter(Z0(:, 1), Z0(:, 2), 100, 'd', 'filled', 'MarkerFaceColor', hanred);
 
 % % Edgeworth expansion
-% mu = reconstruct_CUT(Z0, W, 1, 4); % 1) first central moment (mean)   
-% S  = reconstruct_CUT(Z0, W, 2, 4); % 2) second central moment (covariance)
-% M3 = reconstruct_CUT(Z0, W, 3, 4); % 3) third central moment 
-% M4 = reconstruct_CUT(Z0, W, 4, 4); % 4) fourth central moment
+% mu = reconstruct_cut(Z0, W, 1, 4); % 1) first central moment (mean)   
+% S  = reconstruct_cut(Z0, W, 2, 4); % 2) second central moment (covariance)
+% M3 = reconstruct_cut(Z0, W, 3, 4); % 3) third central moment 
+% M4 = reconstruct_cut(Z0, W, 4, 4); % 4) fourth central moment
 % K3 = moment2cumulant(S, M3);
 % K4 = moment2cumulant(S, M4);
 % [X1, X2, P] = edgeworth2D(mu, S, K3, K4, 50, 50); 
@@ -63,18 +63,18 @@ for tend = [1, 2.5, 5]
     scatter(Zf(:, 1), Zf(:, 2), 100, 'd', 'filled', 'MarkerFaceColor', hanred);
    
     % % Edgeworth expansion
-    % mu = reconstruct_CUT(Zf, W, 1, 4); % 1) first central moment (mean)   
-    % S  = reconstruct_CUT(Zf, W, 2, 4); % 2) second central moment (covariance)
-    % M3 = reconstruct_CUT(Zf, W, 3, 4); % 3) third central moment 
-    % M4 = reconstruct_CUT(Zf, W, 4, 4); % 4) fourth central moment
+    % mu = reconstruct_cut(Zf, W, 1, 4); % 1) first central moment (mean)   
+    % S  = reconstruct_cut(Zf, W, 2, 4); % 2) second central moment (covariance)
+    % M3 = reconstruct_cut(Zf, W, 3, 4); % 3) third central moment 
+    % M4 = reconstruct_cut(Zf, W, 4, 4); % 4) fourth central moment
     % K3 = moment2cumulant(S, M3);
     % K4 = moment2cumulant(S, M4);
     % [X1, X2, P] = edgeworth2D(mu, S, K3, K4, 50, 50); 
     % X = [X1(:) X2(:)]; P = P(:); 
 
     % Principle of Maximum Entropy
-    mu = reconstruct_CUT(Zf, W, 1, 4); % 1) first central moment (mean)   
-    S  = reconstruct_CUT(Zf, W, 2, 4); % 2) second central moment (covariance)
+    mu = reconstruct_cut(Zf, W, 1, 4); % 1) first central moment (mean)   
+    S  = reconstruct_cut(Zf, W, 2, 4); % 2) second central moment (covariance)
     [X, P] = pme_cut2pdf(Zf, W, 'M', M); 
 
     p.ls = "-."; p.color = hanred; 

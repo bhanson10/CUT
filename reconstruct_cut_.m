@@ -1,4 +1,4 @@
-function out = reconstruct_CUT(Z, W, M1, M2)
+function out = reconstruct_cut(Z, W, M1, M2)
 % Description: 
 %   Reconstruct central moment of order M from CUT sigma points
 %

@@ -4,8 +4,8 @@ clear all; close all; clc; format long;
 tol = 1e-10;
 mu = [0; 0]; S = [1 0; 0 1];
 
-%% cut4 demo
-fprintf("2D cut4 results:\n\n")
+%% CUT4 demo
+fprintf("2D CUT4 results:\n\n")
 [Z, W] = cut4(mu, S); 
 
 % E[x_i^2] = 1
@@ -106,8 +106,8 @@ else
     fprintf("ERROR: E[x_i^2*x_j^2]\n\n");
 end
 
-%% cut6 demo
-fprintf("\n2D cut6 results:\n\n")
+%% CUT6 demo
+fprintf("\n2D CUT6 results:\n\n")
 [Z, W] = cut6(mu, S); 
 
 % E[x_i^2] = 1
@@ -186,7 +186,7 @@ else
     fprintf("ERROR: E[x_i^3*x_j]\n\n");
 end
 
-% E[x_i^2*x_j^2] = 0
+% E[x_i^2*x_j^2] = 1
 clear sums; count = 1;
 for i = 1:size(Z, 2)
     sum = 0;
@@ -200,7 +200,7 @@ for i = 1:size(Z, 2)
     end
 end
 sums = sort(sums(:)); fprintf("Size: " + num2str(count - 1) + "\n"); 
-fprintf("E[x_i^2*x_j^2] = 0\n");
+fprintf("E[x_i^2*x_j^2] = 1\n");
 if all(diff(sums) < tol)
     fprintf("Actual[x_i^2*x_j^2] = %f\n\n", sums(1));
 else
@@ -210,8 +210,8 @@ end
 %% 4D parameters
 mu = [0; 0; 0; 0]; S = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1];
 
-%% cut6 demo
-fprintf("\n4D cut6 results:\n\n")
+%% CUT6 demo
+fprintf("\n4D CUT6 results:\n\n")
 [Z, W] = cut6(mu, S); 
 
 % E[x_i^2] = 1
@@ -290,7 +290,7 @@ else
     fprintf("ERROR: E[x_i^3*x_j]\n\n");
 end
 
-% E[x_i^2*x_j^2] = 0
+% E[x_i^2*x_j^2] = 1
 clear sums; count = 1;
 for i = 1:size(Z, 2)
     for j = 1:size(Z, 2)
@@ -304,7 +304,7 @@ for i = 1:size(Z, 2)
     end
 end
 sums = sort(sums(:)); fprintf("Size: " + num2str(count - 1) + "\n"); 
-fprintf("E[x_i^2*x_j^2] = 0\n");
+fprintf("E[x_i^2*x_j^2] = 1\n");
 if all(diff(sums) < tol)
     fprintf("Actual[x_i^2*x_j^2] = %f\n\n", sums(1));
 else

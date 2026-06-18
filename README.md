@@ -3,8 +3,8 @@ This MATLAB function generates the conjugate unscented transform (CUT) weighted 
 
 $$
 \begin{gather}
-    Z \in \mathbb{R}^{N\times d} \\
-    W \in \mathbb{R}^{N\times 1} 
+    Z^(M) \in \mathbb{R}^{N\times d} \\
+    W^(M) \in \mathbb{R}^{N\times 1} 
 \end{gather}
 $$
 

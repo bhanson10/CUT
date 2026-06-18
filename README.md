@@ -7,6 +7,7 @@ $$
     W \in \mathbb{R}^{N\times 1} 
 \end{gather}
 $$
+
 where $N=2d+2^d+1$ when the order $M=4$ and $N=2d^2+2^d+1$ when the order $M=6$. <br>
 
 This function is meant to be used in tandem with [plot_corner_pdf.m](https://github.com/bhanson10/plot_corner_pdf), [plot_nongaussian_surface.m](https://github.com/bhanson10/plot_nongaussian_surface), and [plot_gaussian_ellipsoid.m](https://github.com/bhanson10/plot_gaussian_ellipsoid). <br>

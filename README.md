@@ -1,4 +1,4 @@
-# CUT.m
+# Conjugate Unscented Transform (CUT)
 This MATLAB function generates the conjugate unscented transform (CUT) weighted sigma points following Adurthi et al. [1], both 4th and 6th order. <br>
 
 $$

@@ -10,13 +10,13 @@ $$
 
 where $N=2d+2^d+1$ when the order $M=4$ and $N=2d^2+2^d+1$ when the order $M=6$. <br>
 
-This function is meant to be used in tandem with the [PME repo](https://github.com/bhanson10/PME). <br>
+This function is meant to be used in tandem with the [CUT2PDF_PME repo](https://github.com/bhanson10/CUT2PDF_PME). <br>
 
 ## Examples
 I provide 4 examples on how to use CUT.m. Here are two figures created from test_CUT_2.m and test_CUT_3.m.
-![test_CUT_2](./examples/test_CUT_2.png)
+![test_cut_2](./examples/test_cut_2.png)
 
-![test_CUT_3](./examples/test_CUT_3.png)
+![test_cut_3](./examples/test_cut_3.png)
 
 <br><br>Please direct any questions to blhanson@ucsd.edu. <br><br>
 

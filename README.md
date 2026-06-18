@@ -14,9 +14,9 @@ This function is meant to be used in tandem with [plot_corner_pdf.m](https://git
 
 ## Examples
 I provide 4 examples on how to use CUT.m. Here are two figures created from test_CUT_2.m and test_CUT_3.m.
-![test_CUT_2](test_CUT_2.png)
+![test_CUT_2](./examples/test_CUT_2.png)
 
-![test_CUT_3](test_CUT_3.png)
+![test_CUT_3](./examples/test_CUT_3.png)
 
 <br><br>Please direct any questions to blhanson@ucsd.edu. <br><br>
 
